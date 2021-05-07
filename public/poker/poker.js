@@ -55,7 +55,7 @@ while (computersHand.length < 2) {
 	computersHand.push(card);
 }
 
-//This displays the cards
+//This displays the player's cards
 cardValue1.innerHTML = playersHand[0].value;
 cardValue2.innerHTML = playersHand[1].value; 
 cardSuit1.innerHTML = playersHand[0].suit;
