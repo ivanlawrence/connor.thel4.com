@@ -9,7 +9,7 @@ document.querySelectorAll('select').forEach( function(el) {
 
 function start() {
   
-	const a1 = document.getElementById("a1");
+  const a1 = document.getElementById("a1");
   const a2 = document.getElementById("a2");
   const a3 = document.getElementById("a3");
   const b1 = document.getElementById("b1");
@@ -18,6 +18,7 @@ function start() {
   const c1 = document.getElementById("c1");
   const c2 = document.getElementById("c2");
   const c3 = document.getElementById("c3");
+  const tie = document.getElementById("tie");
 
   const arrA = [
 	  a1.value,
@@ -62,7 +63,7 @@ function start() {
 	
 	const isDiagonalXed = a1.value === "x" && b2.value === "x" && c3.value === "x" 
 	const isDiagonal2Xed = c1.value === "x" && b2.value === "x" && a3.value === "x" 
-  const isArrAXed = arrA.every( v => v === "x" );
+    const isArrAXed = arrA.every( v => v === "x" );
 	const isArrBXed = arrB.every( v => v === "x" );
 	const isArrCXed = arrC.every( v => v === "x" );
 	const isArr1Xed = arr1.every( v => v === "x" );
@@ -70,15 +71,22 @@ function start() {
 	const isArr3Xed = arr3.every( v => v === "x" );
 	
 	const isDiagonalOed = a1.value === "o" && b2.value === "o" && c3.value === "o" 
-		const isDiagonal2Oed = c1.value === "o" && b2.value === "o" && a3.value === "o" 
-  const isArrAOed = arrA.every( v => v === "o" );
+	const isDiagonal2Oed = c1.value === "o" && b2.value === "o" && a3.value === "o" 
+    const isArrAOed = arrA.every( v => v === "o" );
 	const isArrBOed = arrB.every( v => v === "o" );
 	const isArrCOed = arrC.every( v => v === "o" );
 	const isArr1Oed = arr1.every( v => v === "o" );
 	const isArr2Oed = arr2.every( v => v === "o" );
 	const isArr3Oed = arr3.every( v => v === "o" );
 	
-	if (isArrAXed || isArrBXed || isArrCXed || isArr1Xed || isArr2Xed || isArr3Xed ||isDiagonalXed || isDiagonal2Xed === true) {
+    if (!arrAll.includes("")) {
+        makeItHide(msg)
+        makeItShow(catsGame)
+        makeItShow(refresh)
+    }
+
+    
+    if (isArrAXed || isArrBXed || isArrCXed || isArr1Xed || isArr2Xed || isArr3Xed ||isDiagonalXed || isDiagonal2Xed === true) {
 	makeItHide(msg)
 	makeItShow(xWin)
 	makeItShow(refresh)
@@ -87,8 +95,14 @@ function start() {
 	if (isArrAOed || isArrBOed || isArrCOed || isArr1Oed || isArr2Oed || isArr3Oed || isDiagonalOed || isDiagonal2Oed === true) {
 	makeItHide(msg)
 	makeItShow(oWin)
-	makeItShow(refresh)
-	}
+    makeItShow(refresh)
+    
+    }
+    
+    if (pets.includes('cat') === true) {
+        makeItHide(msg)
+        makeItShow(tie)
+    }
  
 	if (player !== 1) {
 		makeItHide(oTurn)
