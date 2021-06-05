@@ -78,54 +78,60 @@ function start() {
 	const isArr1Oed = arr1.every( v => v === "o" );
 	const isArr2Oed = arr2.every( v => v === "o" );
 	const isArr3Oed = arr3.every( v => v === "o" );
-	
-    if (!arrAll.includes("")) {
-        makeItHide(msg)
-        makeItShow(catsGame)
-        makeItShow(refresh)
-    }
 
+    if (arrAll.includes("") === false) {
+        makeItHideAll()
+        makeItShow(tie)
+    }
     
     if (isArrAXed || isArrBXed || isArrCXed || isArr1Xed || isArr2Xed || isArr3Xed ||isDiagonalXed || isDiagonal2Xed === true) {
-	makeItHide(msg)
-	makeItShow(xWin)
-	makeItShow(refresh)
+        makeItHide(oWin)
+        makeItHide(xWin)
+        makeItHide(refresh)
+        makeItHide(xTurn)
+        makeItHide(xTurn)
+        makeItShow(xWin)
+	    makeItShow(refresh)
 	}
 	
 	if (isArrAOed || isArrBOed || isArrCOed || isArr1Oed || isArr2Oed || isArr3Oed || isDiagonalOed || isDiagonal2Oed === true) {
-	makeItHide(msg)
-	makeItShow(oWin)
-    makeItShow(refresh)
-    
+        makeItHide(oWin)
+        makeItHide(xWin)
+        makeItHide(refresh)
+        makeItHide(xTurn)
+        makeItHide(xTurn)
+        makeItShow(oWin)
+        makeItShow(refresh)
     }
     
-    if (pets.includes('cat') === true) {
-        makeItHide(msg)
-        makeItShow(tie)
-    }
- 
 	if (player !== 1) {
-		makeItHide(oTurn)
+		makeItHideAll()
 		makeItShow(xTurn)
 		player++;
 	} else {
-		makeItHide(xTurn)
+        makeItHideAll()
 		makeItShow(oTurn)
 		player--;
-  }
+    }
+
+    
 }
-
-
-
 
 function makeItShow(el) {
-if (!el) return
-el.style.display = ""
+    if (!el) return
+    el.style.display = ""
 }
 
-
-
 function makeItHide(el) {
-if (!el) return
-el.style.display = "none"
+    if (!el) return
+    el.style.display = "none"
+}
+
+function makeItHideAll() {
+    oWin.style.display = "none"
+    xWin.style.display = "none"
+    refresh.style.display = "none"
+    xTurn.style.display = "none"
+    oTurn.style.display = "none"
+    tie.style.display = "none"
 }
