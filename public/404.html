@@ -3,9 +3,16 @@
         <title>
             Error: 404
         </title>
+        <script defer src="404.js"></script>
     </head>
     <body>
         <h1>Error 404: File Not Found</h1>
         <p>Seems like what you are looking for isn't here...</p>
-        </body>
-</html>
+        <br>
+        <span>Enter URL Here:</span>
+        <input type="text" id="input">
+
+        <button onclick=goToURL()>Go to URL</button>
+        <button onclick=homePage()>Go to Home Page</button>
+    </body>
+    </html>
