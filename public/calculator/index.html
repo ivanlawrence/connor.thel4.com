@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+            Calculator - Connor's Webpage
+        </title>
+        <script defer src="calculator.js"></script>
+    </head>
+    <body>
+        <input type="text" placeholder="Input 1" name="int1st" id="int1st" />
+        <select id="oporators" onchange="getOporatorName(this)">
+            <option value="" disabled selected>Select Oporator</option>
+            <option value="+">+ (Plus)</option>
+            <option value="-">- (Minus)</option>
+            <option value="*">* (Times)</option>
+            <option value="/">/ (Divide)</option>
+        </select>
+        <input type="text" placeholder="Input 2" name="int2nd" id="int2nd" />
+        &nbsp = &nbsp
+        <input disabled placeholder="Answer" type="text" name="answer" id="answer" />
+        <button onclick="doMath()">Run</button>
+    </body>
+</html>
