@@ -3,7 +3,7 @@ const link = document.getElementById("link");
 
 urlRequest.addEventListener('input', function(){
     link.href = urlRequest.value;
-    link.innerText = urlRequest.value;
+    link.innerText = urlRequest.value + "*";
 });
 
 function homePage() {
