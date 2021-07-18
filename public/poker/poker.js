@@ -65,3 +65,25 @@ cardSuit2.innerHTML = playersHand[1].suit;
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max))
 }
+
+
+
+function bet() {
+
+}
+
+function call() {
+
+}
+
+function raise() {
+
+}
+
+function check() {
+
+}
+
+function fold() {
+
+}

@@ -6,13 +6,29 @@
         <script defer src="poker.js"></script>
     </head>
     <body>
-        <h1>Poker</h1>
-(This is the kind called Texas Hold 'em)
-Click <a href="https://bicyclecards.com/how-to-play/texas-holdem-poker/">here</a> to view the rules! <br>
-Here are your cards:
-<br>
-<span id="cardValue1"></span><span> of </span><span id="cardSuit1"></span>
-<br>
-<span id="cardValue2"></span><span> of </span><span id="cardSuit2"></span>
+        <h1>Texas Hold'em Poker</h1>
+        Click <a href="https://bicyclecards.com/how-to-play/texas-holdem-poker/">here</a> to view the rules! <br>
+        <div id="game">    
+            Your Cards:
+            <div id="cards" style="display: none;">
+                <br>
+                <span id="cardValue1"></span><span> of </span><span id="cardSuit1"></span>
+                <br>
+                <span id="cardValue2"></span><span> of </span><span id="cardSuit2"></span>
+            </div>
+            <br>
+            <div id="bet">
+                Your Total Bet:
+                <span id="totalBet"></span>
+            </div>
+            <br>
+            <div id="option" style="display: none;">
+                <button id="bet" onclick="bet()" style="display: none;"></button>
+                <button id="call" onclick="call()" style="display: none;"></button>
+                <button id="raise" onclick="raise()" style="display: none;"></button>
+                <button id="check" onclick="check()" style="display: none;"></button>
+                <button id="fold" onclick="fold()" style="display: none;"></button>
+            </div>
+        </div>
     </body>
 </html>
