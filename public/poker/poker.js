@@ -11,18 +11,17 @@ const functions = {
     "raiseBtn": document.getElementById("raise"),
     "checkBtn": document.getElementById("check"),
     "foldBtn": document.getElementById("fold"),
+    "totalBetSpan": document.getElementById("totalBet"),
 
     setup() {
 
+        alert("setup")
         this.betBtn.addEventListener("click", this.bet );
         this.callBtn.addEventListener("click", this.call );
         this.raiseBtn.addEventListener("click", this.raise );
         this.checkBtn.addEventListener("click", this.check );
         this.foldBtn.addEventListener("click", this.fold );
 
-        const card1 = document.getElementById("card1");
-        const card2 = document.getElementById("card2");
-        const winningHands = [];
         const deck = [];
         const shuffledDeck = [];
         const playersHand = [];
@@ -90,20 +89,15 @@ const functions = {
     },
 
     bet() {
-        const raise = prompt("How much do you bet? (Do not write $)")
-        let totalBet = totalBet + Number(raise)
-        alert(totalBet)
-        totalBetSpan.innerHTML = totalBet
+        
+        totalBetSpan.innerHTML = "hello world" 
     },
-
+    
     call() {
         
     },
 
     raise() {
-        const raise = prompt("How much do you raise? (Do not write $)")
-        let totalBet = totalBet + Number(raise)
-        alert(totalBet)
         totalBetSpan.innerHTML = totalBet
     },
 
@@ -112,9 +106,7 @@ const functions = {
     },
 
     fold() {
-        
-    },
+    
+    }
 }
-
-alert("")
 functions.setup()
