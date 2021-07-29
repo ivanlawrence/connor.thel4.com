@@ -1,3 +1,5 @@
+document.getElementById("doMath").addEventListener("click", doMath );
+
 function doMath() {
   const int1st = document.getElementById('int1st').value;
   const oporator = document.getElementById('oporators').value;
@@ -42,4 +44,10 @@ function getOporatorName(el) {
   if (oporator === "*") opName = 'Prouduct';
   if (oporator === "/") opName = 'Quotient';
   document.getElementById('answer').value = opName;
+}
+
+document.getElementById("goHome").addEventListener("click", homePage );
+
+function homePage() {
+    window.location.href = "http://connor.thel4.com";
 }

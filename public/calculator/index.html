@@ -6,6 +6,7 @@
         <script defer src="calculator.js"></script>
     </head>
     <body>
+        <h1>Calculator</h1>
         <input type="text" placeholder="Input 1" name="int1st" id="int1st" />
         <select id="oporators" onchange="getOporatorName(this)">
             <option value="" disabled selected>Select Oporator</option>
@@ -17,6 +18,9 @@
         <input type="text" placeholder="Input 2" name="int2nd" id="int2nd" />
         &nbsp = &nbsp
         <input disabled placeholder="Answer" type="text" name="answer" id="answer" />
-        <button onclick="doMath()">Run</button>
+        <button id="doMath">Run</button>
+        <br>
+        <br>
+        <button id="goHome">Go to the Home Page</button>
     </body>
 </html>
