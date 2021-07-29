@@ -130,3 +130,9 @@ function makeItHideAll() {
     makeItHide(oTurn);
     makeItHide(tie);
 }
+
+document.getElementById("goHome").addEventListener("click", homePage );
+
+function homePage() {
+    window.location.href = "http://connor.thel4.com";
+}
