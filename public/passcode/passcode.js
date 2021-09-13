@@ -1,3 +1,6 @@
+document.getElementById("makeNewUser").addEventListener("click", makeNewUser );
+document.getElementById("checkSignIn").addEventListener("click", checkSignIn );
+
 const newUser = prompt("Do you want to make a new user? (y/n):");
 const users = {
     "a":"b",
