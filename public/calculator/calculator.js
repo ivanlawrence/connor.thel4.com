@@ -1,4 +1,5 @@
-document.getElementById("doMath").addEventListener("click", doMath );
+document.getElementById("int1st").addEventListener("change", doMath );
+document.getElementById("int2nd").addEventListener("change", doMath );
 
 function doMath() {
   const int1st = document.getElementById('int1st').value;
