@@ -1,9 +1,16 @@
 //These are the variables
 let totalBet = 0;
+let betOnTable = Math.floor(Math.random() * Math.floor(100));
+if (getRandomInt(10) === 1) { let isROD = true}
 const totalBetSpan = document.getElementById("totalBet");
 totalBetSpan.innerHTML = totalBet;
 
 //These are the functions
+
+function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
 const functions = {
 
     "betBtn": document.getElementById("bet"),
@@ -15,7 +22,6 @@ const functions = {
 
     setup() {
 
-        alert("setup")
         this.betBtn.addEventListener("click", this.bet );
         this.callBtn.addEventListener("click", this.call );
         this.raiseBtn.addEventListener("click", this.raise );
@@ -89,15 +95,23 @@ const functions = {
     },
 
     bet() {
-        
-        totalBetSpan.innerHTML = "hello world" 
+        let betRequest = prompt("What do you bet? (Do not write the $)")
+        let bet = Number.parseFloat(betRequest)
+        if (bet === "NaN") { return }
+        totalBet = totalBet + bet
+        totalBetSpan.innerHTML = totalBet
     },
     
     call() {
-        
+        totalBet = totalBet + betOnTable
+        totalBetSpan.innerHTML = totalBet
     },
 
     raise() {
+        let betRequest = prompt("What do you raise by? (Do not write the $)")
+        let bet = Number.parseFloat(betRequest)
+        if (bet === "NaN") { return }
+        totalBet = totalBet + bet
         totalBetSpan.innerHTML = totalBet
     },
 
