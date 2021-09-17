@@ -14,7 +14,6 @@ const button = document.querySelector('#inputs > button');
 let guessesUsed = 0
 let guessesLeft1 = 10
 
-console.log(randomNumber)
 guessesLeft.innerHTML = 10; 
 guessCount.innerHTML = 0
 button.addEventListener('click', go);
@@ -47,14 +46,14 @@ function go() {
 	makeItHide(msgLose2)
 
  	if (guessesLeft1 != 1) {
-    guessesUsed++;
+        guessesUsed++;
 		guessesLeft1--
 		guessesLeft.innerHTML = (guessesLeft1);
 		guessCount.innerHTML = (guessesUsed);
- } else {
- makeItShow(msgLose)
- makeItShow(msgLose2)
- }
+    } else {
+        makeItShow(msgLose)
+        makeItShow(msgLose2)
+    }
 }
 
 function makeItShow(el) {
