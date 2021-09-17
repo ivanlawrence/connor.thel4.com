@@ -2,6 +2,7 @@
 let totalBet = 0;
 const totalBetSpan = document.getElementById("totalBet");
 totalBetSpan.innerHTML = "Unknown";
+//let players = parseInt(prompt("How many computer players should play?"))
 
 //Functions
 const functions = {
@@ -105,26 +106,46 @@ const functions = {
             cardSuit12.style.color="#FF0000";
             ofSpan2.style.color="#FF0000";
         }
+
+        //This makes the buttons show or hide
+        function show(el) {
+            if (!el) return
+            el.style.display = ""
+        }
+
+        function hide(el) {
+            if (!el) return
+            el.style.display = "none"
+        }
+
+        if (this.probability(.1)) {
+            hide(this.raiseBtn)
+            hide(this.callBtn)
+        } else {
+            hide(this.checkBtn)
+            hide(this.betBtn)
+        }        
         
     },
 
     bet() {
         let betRequest = prompt("What do you bet? (Do not write the $)")
-        let bet = Number.parseFloat(betRequest)
+        let bet = parseInt(betRequest)
         totalBet = totalBet + bet
-        totalBetSpan.innerHTML = totalBet
+        totalBetSpan.innerHTML = "$" + totalBet
     },
     
     call() {
-        totalBet = totalBet + betOnTable
+        totalBet = totalBet //+ betOnTable
         totalBetSpan.innerHTML = totalBet
     },
 
     raise() {
         let betRequest = prompt("What do you raise by? (Do not write the $)")
-        let bet = Number.parseFloat(betRequest)
+        let bet = parseInt(betRequest)
         totalBet = totalBet + bet
-        totalBetSpan.innerHTML = totalBet
+        betOnTable = totalBet
+        totalBetSpan.innerHTML = "$" + totalBet
     },
 
     check() {
@@ -133,13 +154,18 @@ const functions = {
 
     fold() {
         if (confirm("Are you sure you want to fold? (It will reset everything)")){
+            alert("Thanks for playing!")
             location.reload();
         }
     },
 
     rndInt(min, max) {
         return Math.floor(Math.random() * (max - min) ) + min;
-    }
+    },
+
+    probability(n) {
+        return !!n && Math.random() <= n;
+    },
 }
 functions.setup()
 
