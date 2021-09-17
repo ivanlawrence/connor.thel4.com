@@ -1,16 +1,9 @@
-//These are the variables
+//Variables
 let totalBet = 0;
-let betOnTable = Math.floor(Math.random() * Math.floor(100));
-if (getRandomInt(10) === 1) { let isROD = true}
 const totalBetSpan = document.getElementById("totalBet");
-totalBetSpan.innerHTML = totalBet;
+totalBetSpan.innerHTML = "Unknown";
 
-//These are the functions
-
-function getRandomInt(max) {
-            return Math.floor(Math.random() * Math.floor(max));
-        }
-
+//Functions
 const functions = {
 
     "betBtn": document.getElementById("bet"),
@@ -92,12 +85,32 @@ const functions = {
         function getRandomInt(max) {
             return Math.floor(Math.random() * Math.floor(max));
         }
+
+        //This colors the cards
+        const cardSpan1 = document.getElementById("cardValue1");
+        const cardSpan2 = document.getElementById("cardValue2");
+        const cardSuit11 = document.getElementById("cardSuit1");
+        const cardSuit12 = document.getElementById("cardSuit2");
+        const ofSpan1 = document.getElementById("of1");
+        const ofSpan2 = document.getElementById("of2");
+        
+        if (playersHand[0].color === "red") {
+            cardSpan1.style.color="#FF0000";
+            cardSuit11.style.color="#FF0000";
+            ofSpan1.style.color="#FF0000";
+        }
+        
+        if (playersHand[1].color === "red") {
+            cardSpan2.style.color="#FF0000";
+            cardSuit12.style.color="#FF0000";
+            ofSpan2.style.color="#FF0000";
+        }
+        
     },
 
     bet() {
         let betRequest = prompt("What do you bet? (Do not write the $)")
         let bet = Number.parseFloat(betRequest)
-        if (bet === "NaN") { return }
         totalBet = totalBet + bet
         totalBetSpan.innerHTML = totalBet
     },
@@ -110,20 +123,28 @@ const functions = {
     raise() {
         let betRequest = prompt("What do you raise by? (Do not write the $)")
         let bet = Number.parseFloat(betRequest)
-        if (bet === "NaN") { return }
         totalBet = totalBet + bet
         totalBetSpan.innerHTML = totalBet
     },
 
     check() {
-        
+       totalBetSpan.innerHTML = 0; 
     },
 
     fold() {
-    
+        if (confirm("Are you sure you want to fold? (It will reset everything)")){
+            location.reload();
+        }
+    },
+
+    rndInt(min, max) {
+        return Math.floor(Math.random() * (max - min) ) + min;
     }
 }
 functions.setup()
+
+//Variables (that need to be under the object)
+let betOnTable = functions.rndInt()
 
 document.getElementById("goHome").addEventListener("click", homePage );
 
