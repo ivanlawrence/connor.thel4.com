@@ -1,10 +1,9 @@
 const urlRequest = document.getElementById("input");
-const link = document.getElementById("link");
+const goBtn = document.getElementById("go");
 document.getElementById("goHome").addEventListener("click", homePage );
 
-urlRequest.addEventListener('input', function() {
-    link.href = urlRequest.value;
-    link.innerHTML = urlRequest.value + "*";
+go.addEventListener('click', function() {
+    window.location.href = urlRequest.value;
 });
 
 document.getElementById("goHome").addEventListener("click", homePage );

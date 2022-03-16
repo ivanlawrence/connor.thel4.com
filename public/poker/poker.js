@@ -1,7 +1,7 @@
 //Variables
 let totalBet = 0;
 const totalBetSpan = document.getElementById("totalBet");
-totalBetSpan.innerHTML = "Unknown";
+totalBetSpan.innerHTML = "$0";
 //let players = parseInt(prompt("How many computer players should play?"))
 
 //Functions

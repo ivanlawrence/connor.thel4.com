@@ -1,5 +1,4 @@
-document.getElementById("int1st").addEventListener("change", doMath );
-document.getElementById("int2nd").addEventListener("change", doMath );
+document.getElementById("go").addEventListener("click", doMath );
 
 function doMath() {
   const int1st = document.getElementById('int1st').value;
@@ -11,9 +10,6 @@ function doMath() {
   if (oporator === "-") answer = getDiffrence(int1st, int2nd);
   if (oporator === "*") answer = getProduct(int1st, int2nd);
   if (oporator === "/") answer = getQuotient(int1st, int2nd);
-  if (answer !== "") alert("Done");
-  if (answer === "") alert("Enter Numbers into the input boxes")
-  if (answer === "NaN") alert("Enter Numbers into the input boxes")
 
   document.getElementById('answer').value = answer;
 }
