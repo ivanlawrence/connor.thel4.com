@@ -38,3 +38,9 @@ const vueApp = new Vue({
         division() { return this.int1 / this.int2; },
     },
 });
+
+document.getElementById("goHome").addEventListener("click", homePage );
+
+function homePage() {
+    window.location.href = "http://connor.thel4.com";
+}
