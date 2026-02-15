@@ -7,7 +7,7 @@ function roll() {
 }
 
 function getRandomInt(max) {
-    let out = Math.floor(Math.random() * Math.floor(max))) + 1;
+    let out = Math.floor(Math.random() * Math.floor(max)) + 1;
     return out;
 }
 
