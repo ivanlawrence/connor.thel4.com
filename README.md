@@ -1,8 +1,12 @@
-# Connor's Coding Site
-The goal here is to have a place you can put real code out there in the real world that is not just through some other site like jsFiddle (whicsh is awesome, but this is a little more awesomer)
-# Goals:
-1. make something cool
-1. show it off to your family first
-1. maybe show it to your friends but lets make sure its appropriate to do so <3 (thats a heart)
+# Hello, World!
+Welcome to my little corner of the web — a place where I tinker with code, build tiny projects, and play with little experiments! 
 
-## Here is a new sub heading, you use two `#` for that ;)
+This is the GitHub repo holding all the code for my website, which you can find [here](https://connor.thel4.com)!
+
+Feel free to poke around, try things out, and have fun! :)
+
+## Some small details:
+* All `HTML`, `JS`, and `CSS` (for now!)
+* Dark Mode, because we all know dark mode is simply better
+* Mobile-friendly... Kind of
+* Entirely for fun — zero stress, zero pressure... and zero quality 
