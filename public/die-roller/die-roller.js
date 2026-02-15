@@ -7,7 +7,7 @@ function roll() {
 }
 
 function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+    return (Math.floor(Math.random() * Math.floor(max))) + 1);
 }
 
 document.getElementById("goHome").addEventListener("click", homePage );
