@@ -3,6 +3,7 @@ body {
   color: rgb(255, 255, 255);
   margin: 0;
   padding: 20px;
+  font-family: monospace;
 }
 
 a {
