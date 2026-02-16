@@ -1,33 +1,43 @@
 <html>
     <head>
         <title>
-            Calculator - Connor's Webpage
+            Calculator
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
         <link rel="stylesheet" href="../style.css">
     </head>
     <body>
+        <nav class="menu">
+            <a href="../"> Home </a>
+            <a href="binary/"> Binary Converter </a>
+            <a href="calculator/"> Calculator </a>
+        </nav>
+        <br>
+        <nav class="menu">
+            <a href="die-roller/"> Die Roller </a>
+            <a href="guessing-game/"> Guessing Game </a>
+            <a href="passcode/"> Passcode </a>
+        </nav>
+        <br>
+        <hr>
         <div id="vue-app">
             <h1>Calculator</h1>
             
             <input v-model="int1" type="text" placeholder="Input 1" id="int1st" />
 
-            <select v-model="oporator" id="oporators" onchange="getOporatorName(this)">
-                <option value="" disabled selected>Select Oporator</option>
-                <option v-for="oporator in oporators" :value="oporator.value">{{ oporator.displayName }}</option>
+            <select v-model="operator" id="operators" onchange="getOperatorName(this)">
+                <option value="" disabled selected>Select Operator</option>
+                <option v-for="operator in operators" :value="operator.value">{{ operator.displayName }}</option>
             </select>
 
             <input v-model="int2" type="text" placeholder="Input 2" id="int2nd" />
 
-            <input v-model="addition" v-if="oporator === '+'" disabled placeholder="Answer" type="text" name="answer" id="answer" />
-            <input v-model="subtraction" v-else-if="oporator === '-'" disabled placeholder="Answer" type="text" name="answer" id="answer" />
-            <input v-model="multiplication" v-else-if="oporator === '*'" disabled placeholder="Answer" type="text" name="answer" id="answer" />
-            <input v-model="division" v-else-if="oporator === '/'" disabled placeholder="Answer" type="text" name="answer" id="answer" />
+            <input v-model="addition" v-if="operator === '+'" disabled placeholder="Answer" type="text" name="answer" id="answer" />
+            <input v-model="subtraction" v-else-if="operator === '-'" disabled placeholder="Answer" type="text" name="answer" id="answer" />
+            <input v-model="multiplication" v-else-if="operator === '*'" disabled placeholder="Answer" type="text" name="answer" id="answer" />
+            <input v-model="division" v-else-if="operator === '/'" disabled placeholder="Answer" type="text" name="answer" id="answer" />
             <input v-else="" disabled placeholder="Answer">
-            <br>
-            <br>
-            <button id="goHome">Go to the Home Page</button>
         </div>
         <!-- <script src="calculator.js"></script> -->
         <script src="vue-cal.js" defer></script>

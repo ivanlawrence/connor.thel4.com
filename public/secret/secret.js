@@ -83,10 +83,3 @@ if (playersHand[1].color === "red") {
     cardSuit12.style.color="#FF0000";
     ofSpan2.style.color="#FF0000";
 }
-
-
-document.getElementById("goHome").addEventListener("click", homePage );
-
-function homePage() {
-window.location.href = "http://connor.thel4.com";
-}

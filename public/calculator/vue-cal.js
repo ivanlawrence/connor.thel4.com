@@ -6,8 +6,8 @@ const vueApp = new Vue({
         int1:"",
         int2:"",
         ans:"",
-        oporator:"",
-        oporators:[
+        operator:"",
+        operators:[
             {
                 displayName:"Addition",
                 value:"+"
@@ -38,15 +38,3 @@ const vueApp = new Vue({
         division() { return this.int1 / this.int2; },
     },
 });
-
-document.getElementById("goHome").addEventListener("click", homePage );
-
-function homePage() {
-    window.location.href = "http://connor.thel4.com";
-}
-
-document.getElementById("goHome").addEventListener("click", homePage );
-
-function homePage() {
-    window.location.href = "http://connor.thel4.com";
-}
