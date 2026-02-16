@@ -6,6 +6,10 @@ body {
   padding: 20px;
 }
 
+h1 {
+    color: lightskyblue;
+}
+
 .short-break {
     height: 1px;
 }
@@ -27,4 +31,26 @@ a:hover {
   color: skyblue;
   text-decoration: none;
   font-weight: bold;
+}
+
+button, input, select, textarea {
+    background-color: black;
+    color: deepskyblue;
+    border: 1px solid deepskyblue;
+    padding: 8px 8px;
+    font-family: monospace;
+}
+
+button::placeholder, input::placeholder, select::placeholder, textarea::placeholder {
+    color: deepskyblue;
+} 
+
+button:hover, input:hover, select:hover, textarea:hover {
+    background-color: skyblue;
+    color: black;
+    border: 1px solid deepskyblue;
+}
+
+button:hover::placeholder, input:hover::placeholder, select:hover::placeholder, textarea:hover::placeholder {
+    color: black;
 }
