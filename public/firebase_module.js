@@ -4,7 +4,7 @@ import { getFirestore, collection, getDocs, addDoc, deleteDoc, doc } from 'fireb
 const firebaseConfig = {
     apiKey: "AIzaSyAX66iMaz-FquSA5QqzCOz2hUba0iYAu3o",
     authDomain: "connor-thel4.firebaseapp.com",
-    databaseURL: "https://connor-thel4-default-rtdb.firebaseio.com",
+    //databaseURL: "https://connor-thel4-default-rtdb.firebaseio.com",
     projectId: "connor-thel4",
     storageBucket: "connor-thel4.firebasestorage.app",
     messagingSenderId: "132187590100",
