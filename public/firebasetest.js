@@ -26,6 +26,8 @@ const ul = document.getElementById('dbList');
 button1.addEventListener('click', dbWrite);
 button2.addEventListener('click', dbRead);
 button3.addEventListener('click', dbClear);
+
+alert("JS GO");
     
 async function dbWrite() {
     alert("dbWrite()");
