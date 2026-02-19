@@ -1,5 +1,9 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs, addDoc, deleteDoc, doc } from 'firebase/firestore/lite';
+//import { initializeApp } from 'firebase/app';
+//import { getFirestore, collection, getDocs, addDoc, deleteDoc, doc } from 'firebase/firestore/lite';
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+import { getFirestore, collection, getDocs, addDoc, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-firestore-lite.js";
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyAX66iMaz-FquSA5QqzCOz2hUba0iYAu3o",
