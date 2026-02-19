@@ -28,6 +28,7 @@ button2.addEventListener('click', dbRead);
 button3.addEventListener('click', dbClear);
     
 async function dbWrite() {
+    alert("dbWrite()");
     let inputValue = input.value;
     if (!inputValue) return;
     await addDoc(collection(db, 'testList'), {test1:inputValue});
@@ -35,6 +36,7 @@ async function dbWrite() {
 }
 
 async function dbRead() {
+    alert("dbRead()");
     const snapshot = await getDocs(collection(db, 'testList'));
     const list = snapshot.docs.map(doc => doc.data());
 
@@ -47,6 +49,7 @@ async function dbRead() {
 }
 
 async function dbClear() {
+    alert("dbClear()");
     const snapshot = await getDocs(collection(db, 'testList'));
     const list = snapshot.docs.map(doc => doc.id);
     for (let id of list) {
