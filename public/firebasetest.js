@@ -8,20 +8,8 @@ button1.addEventListener('click', dbWriteLocal);
 button2.addEventListener('click', dbReadLocal);
 button3.addEventListener('click', dbClearLocal);
 
-alert("JS GO");
-    
-async function dbWriteLocal() {
-    alert("dbWrite()");
-    let inputValue = input.value;
-    if (!inputValue) return;
-    await window.dbWrite("testList", {test1:inputValue});
-    input.value = "";
-}
-
 async function dbReadLocal() {
-    alert("dbRead()");
     const list = await window.dbRead('testList');
-    alert("list");
     ul.innerHTML = "";
     list.forEach(item => {
         const li = document.createElement("li");
@@ -30,13 +18,20 @@ async function dbReadLocal() {
     });
 }
 
+async function dbWriteLocal() {
+    let inputValue = input.value;
+    if (!inputValue) return;
+    await window.dbWrite("testList", {test1:inputValue});
+    input.value = "";
+    await dbReadLocal()
+}
+
 async function dbClearLocal() {
-    alert("dbClear()");
     await window.dbClear('testList')
     await dbReadLocal();
 }
 
-
+dbReadLocal()
 /*
 // Write:
 await addDoc(collection(db, 'COLLECTION_NAME'), DATA_OBJECT);
