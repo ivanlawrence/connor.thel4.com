@@ -21,7 +21,7 @@ const input = document.getElementById('dbInput');
 const button1 = document.getElementById('dbButton1');
 const button2 = document.getElementById('dbButton2');
 const button3 = document.getElementById('dbButton3');
-const ul = document.getElementById('taskList');
+const ul = document.getElementById('dbList');
 
 button1.addEventListener('click', dbWrite);
 button2.addEventListener('click', dbRead);
