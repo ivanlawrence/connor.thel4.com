@@ -21,7 +21,7 @@ async function dbWriteLocal() {
 async function dbReadLocal() {
     alert("dbRead()");
     const list = await window.dbRead('testList');
-
+    alert("list");
     ul.innerHTML = "";
     list.forEach(item => {
         const li = document.createElement("li");
